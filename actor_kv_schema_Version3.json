@@ -1,0 +1,13 @@
+{
+  "actorKeyValueStoreSchemaVersion": 1,
+  "title": "Key-Value store layout",
+  "description": "Store raw API responses or full page JSON for each experience/place.",
+  "collections": {
+    "experiences": {
+      "title": "Experiences",
+      "description": "Full extraction objects keyed by experience or place id",
+      "keyPrefix": "experiences/",
+      "contentTypes": ["application/json"]
+    }
+  }
+}

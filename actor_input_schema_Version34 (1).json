@@ -1,0 +1,64 @@
+{
+  "title": "Input schema of the Roblox Experience Stats scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "description": "Experience/game pages or listing pages to start crawling from (e.g. https://www.roblox.com/games/<placeId>/<name>).",
+      "editor": "requestListSources",
+      "prefill": [
+        {
+          "url": "https://www.roblox.com/games/1818/Adventure-Forward"
+        }
+      ]
+    },
+    "experienceIds": {
+      "title": "Experience / Place IDs",
+      "type": "array",
+      "description": "Optional numeric place IDs to directly fetch stats for (preferred for API mode).",
+      "prefill": [
+        {
+          "id": 1818
+        }
+      ]
+    },
+    "useApi": {
+      "title": "Use Roblox API endpoints where available",
+      "type": "boolean",
+      "description": "If true, attempt to use Roblox public endpoints (faster and more reliable). If false, fall back to HTML scraping or Playwright.",
+      "default": true
+    },
+    "useBrowser": {
+      "title": "Use Playwright (render JS)",
+      "type": "boolean",
+      "description": "If true, use PlaywrightCrawler to render pages and capture dynamic player counts. Slower but sometimes required.",
+      "default": false
+    },
+    "maxRequestsPerCrawl": {
+      "title": "Max Requests per Crawl",
+      "type": "integer",
+      "description": "Maximum number of requests that can be made by this crawler.",
+      "default": 500
+    },
+    "followInternalOnly": {
+      "title": "Follow internal links only",
+      "type": "boolean",
+      "description": "If true, keep crawling within roblox.com or the same host as start URL.",
+      "default": true
+    },
+    "checkPlaceDetails": {
+      "title": "Fetch place details (extra API calls)",
+      "type": "boolean",
+      "description": "If true, make additional calls to place/details endpoints (may increase request count).",
+      "default": true
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Number of parallel requests (CheerioCrawler). Lower for politeness.",
+      "default": 10
+    }
+  }
+}

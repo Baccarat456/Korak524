@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "name": "Roblox Experience Stats scraper",
+  "title": "Roblox Experience Stats scraper",
+  "description": "Collects Roblox experience (game) metadata and usage stats (visits, favorites, current players, creator, price, genre). Supports API-first and HTML/browser scraping modes.",
+  "version": "0.0",
+  "meta": {
+    "templateId": "ai-generated-actor",
+    "generatedBy": "Gpt-4o-mini"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json",
+    "keyValueStore": "./kv_schema.json"
+  },
+  "dockerfile": "../Dockerfile"
+}

@@ -1,0 +1,42 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "experience_id",
+          "place_id",
+          "name",
+          "creator",
+          "visits",
+          "favorites",
+          "playing",
+          "maxPlayers",
+          "price",
+          "genre",
+          "url",
+          "extracted_at"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "experience_id": { "label": "Experience ID", "format": "text" },
+          "place_id": { "label": "Place ID", "format": "text" },
+          "name": { "label": "Name", "format": "text" },
+          "creator": { "label": "Creator", "format": "text" },
+          "visits": { "label": "Total visits", "format": "text" },
+          "favorites": { "label": "Favorites", "format": "text" },
+          "playing": { "label": "Playing now", "format": "text" },
+          "maxPlayers": { "label": "Max players", "format": "text" },
+          "price": { "label": "Price", "format": "text" },
+          "genre": { "label": "Genre", "format": "text" },
+          "url": { "label": "URL", "format": "link" },
+          "extracted_at": { "label": "Extracted at", "format": "text" }
+        }
+      }
+    }
+  }
+}
